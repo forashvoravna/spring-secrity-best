@@ -11,4 +11,7 @@ public class TaskDTO {
     private String title;
     private String content;
     private LocalDateTime createdDate;
+
+    public TaskDTO() {
+    }
 }

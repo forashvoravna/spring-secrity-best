@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "users_roles")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,11 +18,11 @@ public class UserRole {
     private Long id;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 }
 
